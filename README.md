@@ -25,9 +25,9 @@ Does not only support spotting and fixing memory leaks, but writing tests also e
 ## Installation
 
 ```sh
-npm install --save-dev @sasha9817/leakage
+npm install --save-dev @ghostz9817/leakage
 # or
-yarn --dev @sasha9817/leakage
+yarn --dev @ghostz9817/leakage
 ```
 
 
@@ -39,7 +39,7 @@ In theory you could use any testing framework to run leakage tests. In practice,
 
 ```js
 import myLib from 'my-lib'
-import { iterate } from '@sasha9817/leakage'
+import { iterate } from '@ghostz9817/leakage'
 
 describe('myLib', () => {
   it('does not leak when doing stuff', () => {
@@ -63,7 +63,7 @@ Use `iterate.async()` for asynchronous test code. See [Asynchronous Tests](#asyn
 ```js
 import test from 'tape'
 import myLib from 'my-lib'
-import { iterate } from '@sasha9817/leakage'
+import { iterate } from '@ghostz9817/leakage'
 
 test('myLib does not leak when doing stuff', () => {
   iterate(() => {
@@ -82,7 +82,7 @@ Use `iterate.async()` to test asynchronous code. The iterator function is suppos
 
 ```js
 import fetch from 'isomorphic-fetch'
-import { iterate } from '@sasha9817/leakage'
+import { iterate } from '@ghostz9817/leakage'
 
 describe('isomorphic-fetch', () => {
   it('does not leak when requesting data and parsing JSON', async () => {
@@ -140,7 +140,7 @@ Methods:
 
 Memory leak errors are instances of this custom error. You can use it to check if an error is really a memory leak error or just a generic kind of problem (like a broken reference).
 
-Import it as `const { MemoryLeakError } = require('@sasha9817/leakage')`.
+Import it as `const { MemoryLeakError } = require('@ghostz9817/leakage')`.
 
 
 ### CLI Parameters
