@@ -12,7 +12,7 @@
     "Brandon Mills (https://github.com/btmills)"
   ],
   "license": "MIT",
-  "repository": "sasha9817/leakage",
+  "repository": "git://github.com/sasha9817/leakage.git",
   "bugs": "https://github.com/sasha9817/leakage/issues",
   "keywords": [
     "memory leak",
@@ -39,5 +39,8 @@
     "chai-as-promised": "^6.0.0",
     "mocha": "^5.2.0",
     "standard": "^11.0.1"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
