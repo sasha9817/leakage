@@ -1,7 +1,5 @@
 # Leakage - Memory Leak Testing for Node
 
-[![Build Status](https://travis-ci.org/andywer/leakage.svg?branch=master)](https://travis-ci.org/andywer/leakage) [![NPM Version](https://img.shields.io/npm/v/leakage.svg)](https://www.npmjs.com/package/leakage) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
 Write leakage tests using Mocha or another test runner of your choice.
 
 Does not only support spotting and fixing memory leaks, but writing tests also enables you to prevent regressions and show that the code does not leak.
@@ -27,9 +25,9 @@ Does not only support spotting and fixing memory leaks, but writing tests also e
 ## Installation
 
 ```sh
-npm install --save-dev leakage
+npm install --save-dev @sasha9817/leakage
 # or
-yarn --dev leakage
+yarn --dev @sasha9817/leakage
 ```
 
 
@@ -41,7 +39,7 @@ In theory you could use any testing framework to run leakage tests. In practice,
 
 ```js
 import myLib from 'my-lib'
-import { iterate } from 'leakage'
+import { iterate } from '@sasha9817/leakage'
 
 describe('myLib', () => {
   it('does not leak when doing stuff', () => {
@@ -65,7 +63,7 @@ Use `iterate.async()` for asynchronous test code. See [Asynchronous Tests](#asyn
 ```js
 import test from 'tape'
 import myLib from 'my-lib'
-import { iterate } from 'leakage'
+import { iterate } from '@sasha9817/leakage'
 
 test('myLib does not leak when doing stuff', () => {
   iterate(() => {
@@ -84,7 +82,7 @@ Use `iterate.async()` to test asynchronous code. The iterator function is suppos
 
 ```js
 import fetch from 'isomorphic-fetch'
-import { iterate } from 'leakage'
+import { iterate } from '@sasha9817/leakage'
 
 describe('isomorphic-fetch', () => {
   it('does not leak when requesting data and parsing JSON', async () => {
@@ -142,7 +140,7 @@ Methods:
 
 Memory leak errors are instances of this custom error. You can use it to check if an error is really a memory leak error or just a generic kind of problem (like a broken reference).
 
-Import it as `const { MemoryLeakError } = require('leakage')`.
+Import it as `const { MemoryLeakError } = require('@sasha9817/leakage')`.
 
 
 ### CLI Parameters
